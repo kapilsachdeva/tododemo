@@ -24,7 +24,11 @@
           <input type="date" id="dueDate" class="taskDate" ng-model="newTaskDate">
           <label for="dueDate">Due Date</label>
         </div>
-        
+        <div class="row">
+          <button class="taskAdd" ng-click="addNew()"><i class="fa fa-plus icon"></i>Add task</button>
+          <button class="taskDelete" ng-click="deleteTask()"><i class="fa fa-trash-o icon"></i>Delete</button>
+          <button class="taskDelete" ng-click="deleteAllTask()"><i class="fa fa-trash-o icon"></i>Delete all</button>
+        </div>
       </form>
       <ul  class="taskList">
         <li class="taskItem" ng-repeat="taskItem in taskItem track by $index" ng-model="taskItem">
